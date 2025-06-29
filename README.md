@@ -1,7 +1,10 @@
-# API-del-proyecto
+# 📦 API del Proyecto — Backend de Empleados y Usuarios
+
+Proyecto backend desarrollado en **Node.js**, usando **Express**, **MongoDB (Mongoose)** y autenticación con **bcrypt**. Permite gestionar empleados, usuarios y autenticación básica.
+
+---
 
 ## 📂 Estructura del proyecto
-
 ```
 API_BACKEND/
 │
