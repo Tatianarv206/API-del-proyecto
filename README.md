@@ -52,36 +52,41 @@ API_BACKEND/
 
 1️⃣ Clona este repositorio:
 
-```bash
+```
 git clone https://github.com/Tatianarv206/API-del-proyecto.git
+```
 2️⃣ Ingresa a la carpeta:
-
+```
 cd API-del-proyecto
+```
 3️⃣ Instala las dependencias:
-
+```
 npm install
+```
 4️⃣ Levanta el servidor:
+```
 npm run dev
+```
 📌 Endpoints disponibles
 📁 Empleados
+```
 Método	Ruta	Descripción
 GET	/api/empleados	Obtener todos los empleados
 POST	/api/empleados	Crear un nuevo empleado
 GET	/api/empleados/:id	Obtener un empleado por ID
 PUT	/api/empleados/:id	Actualizar un empleado por ID
 DELETE	/api/empleados/:id	Eliminar un empleado por ID
-
+```
 📁 Autenticación
+```
 Método	Ruta	Descripción
 POST	/api/register	Registrar un nuevo usuario
 POST	/api/login	Iniciar sesión de usuario
-
+```
 📌 📄 Ejemplos JSON (Postman)
+```
 Se encuentran en la carpeta:
-
-pgsql
-Copiar
-Editar
 postman-examples/
 ├── empleados.json
 └── usuarios.json
+```
