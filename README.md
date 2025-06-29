@@ -24,7 +24,7 @@ API_BACKEND/
 │ ├── database.js
 │ └── index.js
 │
-├── postman-examples/
+├── postman-ejemplos/
 │ ├── empleados.json
 │ └── usuarios.json
 │
