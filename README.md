@@ -2,6 +2,7 @@
 
 ## 📂 Estructura del proyecto
 
+```
 API_BACKEND/
 │
 ├── backend/
@@ -28,3 +29,4 @@ API_BACKEND/
 ├── package-lock.json
 ├── package.json
 └── README.md
+```
