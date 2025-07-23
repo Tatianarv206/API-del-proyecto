@@ -27,6 +27,7 @@ API_BACKEND/
 ├── postman-ejemplos/
 │ ├── empleados.json
 │ └── usuarios.json
+| └── productos-servicios.json
 │
 ├── node_modules/
 ├── package-lock.json
