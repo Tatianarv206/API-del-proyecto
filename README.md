@@ -12,14 +12,17 @@ API_BACKEND/
 │ ├── controllers/
 │ │ ├── auth.controller.js
 │ │ └── empleado.controller.js
+| | └──productoServicio.controller.js
 │ │
 │ ├── models/
 │ │ ├── empleado.js
 │ │ └── usuario.js
+| | └── productoServicio.model.js
 │ │
 │ ├── routes/
 │ │ ├── auth.route.js
 │ │ └── empleado.route.js
+| | └── productoServicio.routes.js
 │ │
 │ ├── database.js
 │ └── index.js
