@@ -84,10 +84,20 @@ Método	Ruta	Descripción
 POST	/api/register	Registrar un nuevo usuario
 POST	/api/login	Iniciar sesión de usuario
 ```
+📁 Productos y Servicios
+```
+Método	Ruta	Descripción
+GET	/api/productos-servicios	Obtener todos los productos y servicios
+GET	/api/productos-servicios/:id	Obtener un producto o servicio por su ID
+POST	/api/productos-servicios	Crear un nuevo producto o servicio
+PUT	/api/productos-servicios/:id	Actualizar un producto o servicio
+DELETE	/api/productos-servicios/:id	Eliminar un producto o servicio
+```
 📌 📄 Ejemplos JSON (Postman)
 ```
 Se encuentran en la carpeta:
 postman-examples/
 ├── empleados.json
 └── usuarios.json
+└──´roductosservicios.json
 ```
