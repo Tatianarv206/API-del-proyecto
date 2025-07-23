@@ -1,0 +1,15 @@
+{
+  "nombre": "Hosting Web Profesional",
+  "tipo": "servicio",
+  "descripcion": "Servicio de alojamiento web con SSL, backups y soporte 24/7",
+  "precio": 120000
+}
+
+{
+  "nombre": "Mouse Gamer RGB",
+  "tipo": "producto",
+  "descripcion": "Mouse con 7 botones programables, iluminación RGB y sensor óptico de alta precisión.",
+  "precio": 85000,
+}
+
+
