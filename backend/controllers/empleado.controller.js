@@ -26,6 +26,8 @@ empleadoCtrl.getEmpleados = async (req, res) => {
  * Ruta: /api/empleados
  */
 empleadoCtrl.createEmpleados = async (req, res) => {
+     const data = { ...req.body };
+    delete data._id;
     const empleado = new Empleado(req.body); // Crea un nuevo documento a partir del cuerpo de la solicitud
     await empleado.save(); // Guarda en la base de datos
     res.json({
