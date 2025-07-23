@@ -99,5 +99,5 @@ Se encuentran en la carpeta:
 postman-examples/
 ├── empleados.json
 └── usuarios.json
-└──´roductosservicios.json
+└──productosservicios.json
 ```
