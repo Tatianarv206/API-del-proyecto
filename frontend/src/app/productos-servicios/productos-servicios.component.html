@@ -1,0 +1,107 @@
+<!-- Barra de navegación -->
+<nav class="navbar">
+    <div class="navbar-title"><a routerLink="/bienvenida">Gestión de Productos y Servicios</a></div>
+    <div class="navbar-links">
+    <ul class="right">
+      <li><a routerLink="/bienvenida">Inicio</a></li>
+      <li><a routerLink="/empleados">Gestión de Empleados</a></li>
+      <li><a routerLink="/productos-servicios">Gestión de Productos y Servicios</a></li>
+      <li><a (click)="cerrarSesion()" class="cerrar-sesion">Cerrar Sesión</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container section">
+  <h4 class="center-align titulo">Gestión de Productos y Servicios</h4>
+
+  <!-- FORMULARIO UNIFICADO -->
+  <form (ngSubmit)="crearItem()" class="card p-4 mb-4 shadow">
+    <h5 class="mb-3">Agregar Producto o Servicio</h5>
+
+    <div class="form-group mb-3">
+      <label for="tipo">Tipo</label>
+      <select [(ngModel)]="nuevoItem.tipo" name="tipo" id="tipo" class="form-control" required>
+        <option value="" disabled selected>Selecciona una opción</option>
+        <option value="producto">Producto</option>
+        <option value="servicio">Servicio</option>
+      </select>
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="nombre">Nombre</label>
+      <input [(ngModel)]="nuevoItem.nombre" name="nombre" id="nombre" class="form-control" required />
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="descripcion">Descripción</label>
+      <input [(ngModel)]="nuevoItem.descripcion" name="descripcion" id="descripcion" class="form-control" required />
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="precio">Precio</label>
+      <input type="number" [(ngModel)]="nuevoItem.precio" name="precio" id="precio" class="form-control" required />
+    </div>
+
+    <button class="btn btn-primary w-100">Agregar</button>
+  </form>
+
+  <!-- LISTA DE PRODUCTOS -->
+  <div class="card shadow mb-5">
+    <div class="card-body">
+      <h5 class="card-title">Lista de Productos</h5>
+      <table class="table table-bordered table-hover mt-3">
+        <thead class="table-light">
+          <tr>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Precio</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <ng-container *ngFor="let item of items">
+          <tr *ngIf="item.tipo === 'producto'">
+            <td>{{ item.nombre }}</td>
+            <td>{{ item.descripcion }}</td>
+            <td>\${{ item.precio }}</td>
+            <td>
+              <button class="btn-editar" (click)="editarItem(item)">Editar</button>
+              <button class="btn-eliminar"(click)="eliminarItem(item._id!)" >Eliminar</button>
+            </td>
+          </tr>
+          </ng-container>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- LISTA DE SERVICIOS -->
+  <div class="card shadow">
+    <div class="card-body">
+      <h5 class="card-title">Lista de Servicios</h5>
+      <table class="table table-bordered table-hover mt-3">
+        <thead class="table-light">
+          <tr>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Precio</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <ng-container *ngFor="let item of items">
+          <tr *ngIf="item.tipo === 'servicio'">
+            <td>{{ item.nombre }}</td>
+            <td>{{ item.descripcion }}</td>
+            <td>\${{ item.precio }}</td>
+            <td>
+              <button class="btn-editar" (click)="editarItem(item)">Editar</button>
+              <button class="btn-eliminar" (click)="eliminarItem(item._id!)" >Eliminar</button>
+            </td>
+          </tr>
+          </ng-container>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

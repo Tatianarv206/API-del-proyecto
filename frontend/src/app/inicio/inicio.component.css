@@ -1,0 +1,46 @@
+.inicio-container {
+  background-image: url('https://images.unsplash.com/photo-1581093588401-40aa09d6363e');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+  color: white;
+}
+
+.titulo {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.mensaje {
+  font-size: 1.5em;
+  margin-bottom: 30px;
+}
+
+.botones button {
+  margin: 0 10px;
+  padding: 12px 20px;
+  font-size: 1em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-login {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.btn-register {
+  background-color: #2196F3;
+  color: white;
+}

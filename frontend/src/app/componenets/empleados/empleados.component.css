@@ -1,0 +1,76 @@
+/* Estilo de la barra de navegación */
+.navbar {
+  background-color: #2196f3;
+  color: white;
+  padding: 5px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Título del navbar */
+.navbar-title {
+  font-size: 22px;
+  font-weight: bold;
+  padding: 0 10px;
+}
+
+/* Enlaces del navbar */
+.navbar-links ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links ul li {
+  margin-left: 20px;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar-links a:hover {
+  text-decoration: underline;
+  color: #bbdefb;
+}
+/* Botón Editar */
+.btn-editar {
+  background-color:	#d6d6d6; /* Amarillo suave */
+  color: #000;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  margin-right: 6px;
+}
+
+.btn-editar:hover {
+  background-color:		#616161;
+}
+
+/* Botón Eliminar */
+.btn-eliminar {
+  background-color: #ef5350; /* Rojo suave */
+  color: white;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.btn-eliminar:hover {
+  background-color: #e53935;
+}
+
+/* Botón de cerrar sesión */
+.cerrar-sesion {
+  color: #ff8a80;
+}

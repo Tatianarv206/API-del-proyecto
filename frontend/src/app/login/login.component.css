@@ -1,0 +1,79 @@
+/* Contenedor del login */
+.container {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Título */
+h3 {
+  text-align: center;
+  color: #2196f3;
+  margin-bottom: 20px;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px 0;
+  margin: 10px 0;
+  border: 1px solid  #90a4ae;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border 0.3s ease;
+  
+}
+input::placeholder {
+  font-size: 15px;      
+  color: #666;          
+  font-weight: 400;    
+  padding: 0px 5px; 
+}
+
+input:focus {
+  border-color: #2196f3;
+  outline: none;
+}
+
+/* Botón */
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1976d2;
+}
+
+/* Mensaje de error */
+p {
+  text-align: center;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* Enlace a registro */
+a {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  color: #2196f3;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+a:hover {
+  text-decoration: underline;
+}

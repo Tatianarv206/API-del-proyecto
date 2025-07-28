@@ -1,0 +1,78 @@
+<!-- Barra de navegación -->
+<nav class="navbar">
+  <div class="navbar-title"><a href="#!" routerLink="/bienvenida" >Gestión de Empleados</a></div>
+  <div class="navbar-links">
+    <ul class="right">
+      <li><a routerLink="/bienvenida">Inicio</a></li>
+      <li><a routerLink="/empleados">Gestión de Empleados</a></li>
+      <li><a routerLink="/productos-servicios">Gestión de Productos y Servicios</a></li>
+      <li><a (click)="cerrarSesion()" class="logout-link">Cerrar Sesión</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Contenido principal -->
+<div class="container section">
+  <h4 class="center-align titulo">Gestión de Empleados</h4>
+  <div class="row">
+    <!-- Formulario -->
+    <div class="col s12 m5">
+      <div class="card z-depth-2">
+        <div class="card-content">
+          <span class="card-title">Formulario de Empleado</span>
+          <form #empleadoForm="ngForm" (ngSubmit)="agregarEmpleado(empleadoForm)">
+            <input type="hidden" name="_id" [(ngModel)]="empleadoService.selectedEmpleado._id">
+            <div class="input-field">
+              <input type="text" name="name" [(ngModel)]="empleadoService.selectedEmpleado.name" required>
+              <label class="active">Nombre</label>
+            </div>
+            <div class="input-field">
+              <input type="text" name="position" [(ngModel)]="empleadoService.selectedEmpleado.position" required>
+              <label class="active">Cargo</label>
+            </div>
+            <div class="input-field">
+              <input type="text" name="office" [(ngModel)]="empleadoService.selectedEmpleado.office" required>
+              <label class="active">Oficina</label>
+            </div>
+            <div class="input-field">
+              <input type="number" name="salary" [(ngModel)]="empleadoService.selectedEmpleado.salary" required min="0">
+              <label class="active">Salario</label>
+            </div>
+            <div class="card-action center-align">
+              <button class="btn guardar" type="submit">Guardar</button>
+              <button class="btn limpiar" type="button" (click)="resetForm(empleadoForm)">Limpiar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lista -->
+    <div class="col s12 m7">
+      <table class="striped responsive-table centered">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Cargo</th>
+            <th>Oficina</th>
+            <th>Salario</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let emp of empleadoService.empleados">
+            <td>{{ emp.name }}</td>
+            <td>{{ emp.position }}</td>
+            <td>{{ emp.office }}</td>
+            <td>${{ emp.salary }}</td>
+            <td>
+              <button class="btn-editar" (click)="editarEmpleado(emp)">Editar</button>
+              <button class="btn-eliminar" (click)="eliminarEmpleado(emp._id)">Eliminar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
