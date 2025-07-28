@@ -1,12 +1,11 @@
-# 📦 API del Proyecto — Backend de Empleados, Usuarios y Productos/Servicios
+# 📦 API del Proyecto — Backend y Frontend de Empleados, Usuarios y Productos/Servicios
 
-Proyecto backend desarrollado en **Node.js**, usando **Express**, **MongoDB (Mongoose)** y autenticación con **bcrypt**.  
-También incluye el frontend desarrollado en **Angular**, para una solución completa fullstack.
+Proyecto fullstack desarrollado en **Node.js** (backend) y **Angular** (frontend), usando **Express**, **MongoDB (Mongoose)** y autenticación con **bcrypt**.  
+Permite gestionar empleados, usuarios, productos y servicios, con una interfaz moderna.
 
 ---
 
-## 📂 Estructura del Proyecto
-
+## 📂 Estructura del proyecto
 API-del-proyecto/
 │
 ├── backend/
@@ -55,75 +54,94 @@ Editar
 
 ---
 
-## 🛠️ Tecnologías Utilizadas
+## 📌 Tecnologías utilizadas
 
-### 🔹 Backend:
 - Node.js
 - Express
 - MongoDB + Mongoose
 - Bcrypt
-- CORS
+- Cors
 - Morgan
 - Nodemon
-
-### 🔹 Frontend:
 - Angular
 - TypeScript
-- HTML + CSS
-- Angular CLI
-- Bootstrap (opcional)
+- Postman (para pruebas)
 
 ---
 
-## 🚀 Instalación y Uso
+## 📦 Instalación
 
-### 1️⃣ Clona este repositorio
-
-```bash
+1️⃣ Clona este repositorio:
 git clone https://github.com/Tatianarv206/API-del-proyecto.git
-cd API-del-proyecto
-2️⃣ Instala dependencias backend
-bash
+
+css
 Copiar
 Editar
+
+2️⃣ Ingresa a la carpeta:
+cd API-del-proyecto
+
+css
+Copiar
+Editar
+
+3️⃣ Instala las dependencias del backend:
 cd backend
 npm install
 npm run dev
-3️⃣ Instala dependencias frontend
-bash
+
+yaml
 Copiar
 Editar
+
+4️⃣ En una nueva terminal, instala y ejecuta el frontend:
 cd ../frontend
 npm install
 ng serve
-🌐 Endpoints Backend
-📁 Empleados
-Método	Ruta	Descripción
-GET	/api/empleados	Obtener todos los empleados
-POST	/api/empleados	Crear un nuevo empleado
-GET	/api/empleados/:id	Obtener un empleado por ID
-PUT	/api/empleados/:id	Actualizar un empleado por ID
-DELETE	/api/empleados/:id	Eliminar un empleado por ID
 
-📁 Autenticación
-Método	Ruta	Descripción
-POST	/api/register	Registrar un nuevo usuario
-POST	/api/login	Iniciar sesión de usuario
-
-📁 Productos y Servicios
-Método	Ruta	Descripción
-GET	/api/productos-servicios	Obtener todos los productos/servicios
-GET	/api/productos-servicios/:id	Obtener uno por ID
-POST	/api/productos-servicios	Crear uno nuevo
-PUT	/api/productos-servicios/:id	Actualizar uno por ID
-DELETE	/api/productos-servicios/:id	Eliminar uno por ID
-
-🧪 Ejemplos JSON para Postman
-Se encuentran en la carpeta postman-ejemplos/:
-
-pgsql
+yaml
 Copiar
 Editar
+
+---
+
+## 📌 Endpoints disponibles
+
+📁 Empleados
+Método Ruta Descripción
+GET /api/empleados Obtener todos los empleados
+POST /api/empleados Crear un nuevo empleado
+GET /api/empleados/:id Obtener un empleado por ID
+PUT /api/empleados/:id Actualizar un empleado por ID
+DELETE /api/empleados/:id Eliminar un empleado por ID
+
+Copiar
+Editar
+
+📁 Autenticación
+Método Ruta Descripción
+POST /api/register Registrar un nuevo usuario
+POST /api/login Iniciar sesión de usuario
+
+Copiar
+Editar
+
+📁 Productos y Servicios
+Método Ruta Descripción
+GET /api/productos-servicios Obtener todos los productos y servicios
+GET /api/productos-servicios/:id Obtener un producto o servicio por su ID
+POST /api/productos-servicios Crear un nuevo producto o servicio
+PUT /api/productos-servicios/:id Actualizar un producto o servicio
+DELETE /api/productos-servicios/:id Eliminar un producto o servicio
+
+yaml
+Copiar
+Editar
+
+---
+
+## 📄 Ejemplos JSON (Postman)
+Se encuentran en la carpeta:
 postman-ejemplos/
 ├── empleados.json
 ├── usuarios.json
