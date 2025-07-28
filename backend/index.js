@@ -40,7 +40,11 @@ app.use(cors({ origin: 'http://localhost:4200' }));
 // -----------------------------------
 // Rutas
 const productoServicioRoutes = require('./routes/productoServicio.routes');
+<<<<<<< HEAD
 app.use('/api/productos-servicios', productoServicioRoutes);
+=======
+app.use('/api/productosyservicios', productoServicioRoutes);
+>>>>>>> 09e395ce57cfd7d1c2f6dd4a84443227441dcebc
 
 
 // Se define el prefijo '/api/empleados' y se le asocian las rutas del archivo empleado.route.js

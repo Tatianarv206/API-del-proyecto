@@ -12,14 +12,17 @@ API_BACKEND/
 │ ├── controllers/
 │ │ ├── auth.controller.js
 │ │ └── empleado.controller.js
+| | └──productoServicio.controller.js
 │ │
 │ ├── models/
 │ │ ├── empleado.js
 │ │ └── usuario.js
+| | └── productoServicio.model.js
 │ │
 │ ├── routes/
 │ │ ├── auth.route.js
 │ │ └── empleado.route.js
+| | └── productoServicio.routes.js
 │ │
 │ ├── database.js
 │ └── index.js
@@ -27,6 +30,7 @@ API_BACKEND/
 ├── postman-ejemplos/
 │ ├── empleados.json
 │ └── usuarios.json
+| └── productos-servicios.json
 │
 ├── node_modules/
 ├── package-lock.json
@@ -83,10 +87,20 @@ Método	Ruta	Descripción
 POST	/api/register	Registrar un nuevo usuario
 POST	/api/login	Iniciar sesión de usuario
 ```
+📁 Productos y Servicios
+```
+Método	Ruta	Descripción
+GET	/api/productos-servicios	Obtener todos los productos y servicios
+GET	/api/productos-servicios/:id	Obtener un producto o servicio por su ID
+POST	/api/productos-servicios	Crear un nuevo producto o servicio
+PUT	/api/productos-servicios/:id	Actualizar un producto o servicio
+DELETE	/api/productos-servicios/:id	Eliminar un producto o servicio
+```
 📌 📄 Ejemplos JSON (Postman)
 ```
 Se encuentran en la carpeta:
 postman-examples/
 ├── empleados.json
 └── usuarios.json
+└──productosservicios.json
 ```
