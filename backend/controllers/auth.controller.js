@@ -41,12 +41,12 @@ authCtrl.login = async (req, res) => {
         // buscar usuario
         const usuario = await Usuario.findOne({username});
         if(!usuario) {
-          return res.status(404).json({error: 'Usuario no encontrado'});
+          return res.status(404).json({error: 'Usuario o contraseña incorrectos. Intenta nuevamente.'});
           }
            // Verificar contraseña 
         const passwordValid = await bcrypt.compare(password, usuario.password);
         if (!passwordValid) 
-          return res.status(401).json({ error: 'Contraseña incorrecta' });
+          return res.status(401).json({ error: 'Usuario o contraseña incorrectos. Intenta nuevamente.' });
         
 
           res.json({status: 'Login exitoso', usuario});

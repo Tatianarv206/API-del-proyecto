@@ -12,6 +12,8 @@ const cors = require('cors');               // Middleware para permitir solicitu
 const app = express();                      // Se crea la instancia principal del servidor
 const {mongoose} = require('./database'); // Se importa la conexión a la base de datos (no todo el módulo)
 const authRoutes = require('./routes/auth.route');
+
+
 // -----------------------------------
 // Configuraciones del servidor
 // -----------------------------------
@@ -36,6 +38,10 @@ app.use(cors({ origin: 'http://localhost:4200' }));
 // -----------------------------------
 // Rutas del servidor
 // -----------------------------------
+// Rutas
+const productoServicioRoutes = require('./routes/productoServicio.routes');
+app.use('/api/productos-servicios', productoServicioRoutes);
+
 
 // Se define el prefijo '/api/empleados' y se le asocian las rutas del archivo empleado.route.js
 app.use('/api/empleados', require('./routes/empleado.route'));
