@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 const ProductoServicio = require('../models/productoServicio.model');
 const productoServicioCtrl = {};
 
@@ -44,7 +44,7 @@ productoServicioCtrl.eliminar = async (req, res) => {
 };
  
 module.exports = productoServicioCtrl;
-=======
+
 const ProductoServicio = require('../models/productoServicio.model');
 const productoServicioCtrl = {};
 
@@ -102,4 +102,4 @@ productoServicioCtrl.eliminar = async (req, res) => {
 };
  
 module.exports = productoServicioCtrl;
->>>>>>> 09e395ce57cfd7d1c2f6dd4a84443227441dcebc
+
